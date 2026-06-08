@@ -33,7 +33,7 @@ const services = [
 
 export default function FeaturedServices() {
   return (
-    <section className="bg-[#faf8f4] py-32">
+    <section className="bg-white py-24">
       <div className="mx-auto max-w-[1800px] px-8 lg:px-20">
 
         {/* Header */}
