@@ -1,15 +1,13 @@
-import Image from "next/image";
+import Hero from "@/components/hero/Hero";
+import FeaturedServices from "@/components/services/FeaturedServices";
+import GallerySection from "@/components/gallery/GallerySection";
 
 export default function Home() {
   return (
-    <main>
-      <h1>Models + Misfits</h1>
-
-      <h2>Salon and Spa</h2>
-
-      <p>
-        Welcome Home
-      </p>
-    </main>
+    <>
+      <Hero />
+      <FeaturedServices />
+      <GallerySection />
+    </>
   );
 }
