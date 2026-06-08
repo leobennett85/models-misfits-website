@@ -2,38 +2,42 @@ import Image from "next/image";
 
 const services = [
   {
+    category: "Signature Service",
     title: "Hair Color",
     description:
-      "Custom color, balayage, blonding, vivid transformations, and color correction.",
+      "Dimensional blonding, balayage, vivid color, corrective work, and custom formulations tailored uniquely to you.",
     image: "/services/color.png",
   },
   {
+    category: "Bridal Experience",
     title: "Bridal Beauty",
     description:
-      "Luxury bridal styling, consultations, trials, and wedding-day beauty.",
+      "Luxury bridal styling, consultations, previews, and wedding-day beauty designed for unforgettable moments.",
     image: "/services/bridal.png",
   },
   {
+    category: "Luxury Length",
     title: "Extensions",
     description:
-      "Length, volume, and seamless extension services tailored to your look.",
+      "Seamless volume, length, and transformation services customized to complement your lifestyle and look.",
     image: "/services/extensions.png",
   },
   {
+    category: "Finishing Touch",
     title: "Styling",
     description:
-      "Professional styling for everyday confidence and special occasions.",
+      "Professional styling for special events, photoshoots, celebrations, and everyday confidence.",
     image: "/services/styling.png",
   },
 ];
 
 export default function FeaturedServices() {
   return (
-    <section className="bg-[#faf8f4] py-24">
-      <div className="mx-auto max-w-7xl px-6">
+    <section className="bg-[#faf8f4] py-32">
+      <div className="mx-auto max-w-[1800px] px-8 lg:px-20">
 
-        {/* Section Header */}
-        <div className="mb-20 text-center">
+        {/* Header */}
+        <div className="mb-24 text-center">
           <p className="mb-4 uppercase tracking-[0.35em] text-[#c8a45d]">
             Our Services
           </p>
@@ -43,13 +47,14 @@ export default function FeaturedServices() {
           </h2>
 
           <p className="mx-auto max-w-2xl text-lg text-gray-600">
-            From vivid color transformations to luxury bridal styling,
-            Models + Misfits creates personalized beauty experiences.
+            Personalized beauty experiences designed to celebrate your
+            individuality, confidence, and creativity.
           </p>
         </div>
 
-        {/* Cards */}
-        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
+        {/* Services Grid */}
+        <div className="grid gap-10 md:grid-cols-2 xl:grid-cols-4">
+
           {services.map((service) => (
             <div
               key={service.title}
@@ -67,12 +72,12 @@ export default function FeaturedServices() {
                 hover:ring-[#c8a45d]/30
               "
             >
-              {/* Image Area */}
+              {/* Image */}
               <div
                 className="
                   relative
                   flex
-                  h-[22rem]
+                  h-[24rem]
                   items-center
                   justify-center
                   overflow-hidden
@@ -82,8 +87,8 @@ export default function FeaturedServices() {
                 <div
                   className="
                     absolute
-                    h-64
-                    w-64
+                    h-72
+                    w-72
                     rounded-full
                     bg-[#c8a45d]/10
                     blur-3xl
@@ -96,8 +101,8 @@ export default function FeaturedServices() {
                 <Image
                   src={service.image}
                   alt={service.title}
-                  width={400}
-                  height={400}
+                  width={500}
+                  height={500}
                   className="
                     relative
                     z-10
@@ -112,11 +117,16 @@ export default function FeaturedServices() {
 
               {/* Content */}
               <div className="p-8">
-                <h3 className="mb-3 text-3xl font-semibold text-[#111827]">
+
+                <p className="mb-3 text-xs uppercase tracking-[0.25em] text-[#c8a45d]">
+                  {service.category}
+                </p>
+
+                <h3 className="mb-4 text-3xl font-semibold text-[#111827]">
                   {service.title}
                 </h3>
 
-                <div className="mb-5 h-px w-12 bg-[#c8a45d]" />
+                <div className="mb-6 h-px w-12 bg-[#c8a45d]" />
 
                 <p className="leading-relaxed text-gray-600">
                   {service.description}
@@ -124,6 +134,7 @@ export default function FeaturedServices() {
               </div>
             </div>
           ))}
+
         </div>
 
       </div>

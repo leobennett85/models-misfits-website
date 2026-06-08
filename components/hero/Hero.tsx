@@ -103,6 +103,7 @@ export default function Hero() {
           relative
           z-10
           flex
+          max-w-4xl
           flex-col
           items-center
           text-center
@@ -111,17 +112,17 @@ export default function Hero() {
         <p
           className="
             mb-8
+            text-sm
             uppercase
             tracking-[0.4em]
             text-[#c8a45d]
-            text-sm
             md:text-base
           "
         >
           Models + Misfits Salon + Spa
         </p>
 
-        <div className="mb-6">
+        <div className="mb-8">
           <Image
             src="/logos/MMLogo-v2.png"
             alt="Models + Misfits Salon and Spa"
@@ -131,38 +132,73 @@ export default function Hero() {
             className="
               h-auto
               w-[340px]
-              md:w-[500px]
-              lg:w-[700px]
+              md:w-[520px]
+              lg:w-[760px]
             "
           />
         </div>
 
+        <h2
+          className="
+            mb-6
+            text-xl
+            font-medium
+            tracking-wide
+            text-[#3f536d]
+            md:text-2xl
+          "
+        >
+          Luxury Color • Bridal Beauty • Creative Expression
+        </h2>
+
         <p
           className="
             mb-10
+            max-w-2xl
             text-lg
-            md:text-xl
-            text-[#3f536d]
+            leading-relaxed
+            text-[#5c6c7d]
           "
         >
-          Welcome Home
+          Where bold creativity meets luxury beauty. Specializing in
+          vivid transformations, dimensional color, bridal styling,
+          and personalized salon experiences.
         </p>
 
-        <button
-          className="
-            rounded-md
-            bg-[#c8a45d]
-            px-8
-            py-4
-            text-white
-            transition-all
-            duration-300
-            hover:scale-105
-            hover:shadow-lg
-          "
-        >
-          Book Your Transformation
-        </button>
+        <div className="flex flex-col gap-4 sm:flex-row">
+          <button
+            className="
+              rounded-md
+              bg-[#c8a45d]
+              px-8
+              py-4
+              text-white
+              transition-all
+              duration-300
+              hover:scale-105
+              hover:shadow-lg
+            "
+          >
+            Book Your Transformation
+          </button>
+
+          <button
+            className="
+              rounded-md
+              border
+              border-[#c8a45d]
+              px-8
+              py-4
+              text-[#c8a45d]
+              transition-all
+              duration-300
+              hover:bg-[#c8a45d]
+              hover:text-white
+            "
+          >
+            View Our Work
+          </button>
+        </div>
       </div>
     </section>
   );
