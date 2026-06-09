@@ -69,11 +69,20 @@ export default function Footer() {
             </h4>
 
             <ul className="space-y-3 text-slate-300">
-              <li>910 Topsail Road</li>
-              <li>Suite 7</li>
-              <li>Majestic Salon Suites</li>
-              <li>St. John&apos;s, NL</li>
-              <li>Canada</li>
+                <a
+    href="https://maps.google.com/?q=910+Topsail+Road+Suite+7+St+Johns+NL"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="hover:text-[#c8a45d]"
+  >
+    910 Topsail Road
+    <br />
+    Suite 7
+    <br />
+    Majestic Salon Suites
+    <br />
+    St. John&apos;s, NL
+  </a>
             </ul>
           </div>
 

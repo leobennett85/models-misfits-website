@@ -95,7 +95,7 @@ export default function Navbar() {
             </Link>
 
             <Link
-              href="/#contact"
+              href="/contact"
               className="
                 text-sm
                 uppercase
@@ -203,7 +203,7 @@ export default function Navbar() {
             </Link>
 
             <Link
-              href="/#contact"
+              href="/contact"
               className="py-4 text-lg"
               onClick={() => setMenuOpen(false)}
             >
