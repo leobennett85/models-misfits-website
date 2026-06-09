@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 const galleryImages = [
   {
@@ -155,26 +156,28 @@ export default function GallerySection() {
 
           {/* CTA */}
           <div className="mt-24 text-center">
-            <button
-              className="
-                rounded-full
-                border
-                border-[#c8a45d]
-                px-8
-                py-4
-                text-sm
-                uppercase
-                tracking-wider
-                text-[#c8a45d]
-                transition-all
-                duration-300
-                hover:bg-[#c8a45d]
-                hover:text-white
-              "
-            >
-              View Full Gallery
-            </button>
-          </div>
+  <Link
+    href="/gallery"
+    className="
+      inline-block
+      rounded-full
+      border
+      border-[#c8a45d]
+      px-8
+      py-4
+      text-sm
+      uppercase
+      tracking-wider
+      text-[#c8a45d]
+      transition-all
+      duration-300
+      hover:bg-[#c8a45d]
+      hover:text-white
+    "
+  >
+    View Full Gallery
+  </Link>
+</div>
 
         </div>
       </section>

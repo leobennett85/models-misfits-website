@@ -18,7 +18,7 @@ export default function BridalPage() {
 
         <p className="mx-auto max-w-3xl text-lg text-slate-600">
           Luxury bridal hair services designed to help you feel confident,
-          beautiful, and completely yourself on one of life's most important days.
+          beautiful, and completely yourself on one of life&apos;s most important days.
         </p>
 
       </section>
@@ -56,7 +56,7 @@ export default function BridalPage() {
             </p>
 
             <p className="mb-10 text-lg leading-relaxed text-slate-600">
-              Together we'll create a timeless hairstyle that photographs
+              Together we&apos;ll create a timeless hairstyle that photographs
               beautifully, lasts throughout the day, and feels uniquely yours.
             </p>
 
@@ -165,7 +165,7 @@ export default function BridalPage() {
         </h2>
 
         <p className="mx-auto mb-10 max-w-2xl text-slate-300">
-          Let's create a wedding-day look you'll love forever.
+          Let&apos;s create a wedding-day look you&apos;ll love forever.
         </p>
 
         <a

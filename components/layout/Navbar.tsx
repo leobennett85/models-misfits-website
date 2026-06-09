@@ -20,10 +20,8 @@ export default function Navbar() {
       "
     >
       <div className="mx-auto max-w-7xl px-6">
-
         <div className="flex h-24 items-center justify-between">
 
-          {/* Logo */}
           <Link href="/" className="flex items-center">
             <Image
               src="/logos/MMLogo-v2.png"
@@ -40,15 +38,21 @@ export default function Navbar() {
             />
           </Link>
 
-          {/* Desktop Navigation */}
           <nav className="hidden items-center gap-10 md:flex">
 
-            <a
-              href="#services"
+            <Link
+              href="/"
+              className="text-sm uppercase tracking-wider transition hover:text-[#c8a45d]"
+            >
+              Home
+            </Link>
+
+            <Link
+              href="/services"
               className="text-sm uppercase tracking-wider transition hover:text-[#c8a45d]"
             >
               Services
-            </a>
+            </Link>
 
             <a
               href="#about"
@@ -57,19 +61,19 @@ export default function Navbar() {
               About
             </a>
 
-            <a
-              href="#bridal"
+            <Link
+              href="/bridal"
               className="text-sm uppercase tracking-wider transition hover:text-[#c8a45d]"
             >
               Bridal
-            </a>
+            </Link>
 
-            <a
-              href="#gallery"
+            <Link
+              href="/gallery"
               className="text-sm uppercase tracking-wider transition hover:text-[#c8a45d]"
             >
               Gallery
-            </a>
+            </Link>
 
             <a
               href="#contact"
@@ -80,7 +84,6 @@ export default function Navbar() {
 
           </nav>
 
-          {/* Desktop CTA */}
           <a
             href="https://www.vagaro.com/modelsandmisfitssalonandspa/book-now"
             target="_blank"
@@ -104,7 +107,6 @@ export default function Navbar() {
             Book Now
           </a>
 
-          {/* Mobile Menu Button */}
           <button
             onClick={() => setMenuOpen(!menuOpen)}
             className="
@@ -127,10 +129,8 @@ export default function Navbar() {
           </button>
 
         </div>
-
       </div>
 
-      {/* Mobile Menu */}
       {menuOpen && (
         <div
           className="
@@ -142,13 +142,21 @@ export default function Navbar() {
         >
           <nav className="flex flex-col p-6">
 
-            <a
+            <Link
+              href="/"
+              className="py-4 text-lg"
+              onClick={() => setMenuOpen(false)}
+            >
+              Home
+            </Link>
+
+            <Link
               href="/services"
               className="py-4 text-lg"
               onClick={() => setMenuOpen(false)}
             >
               Services
-            </a>
+            </Link>
 
             <a
               href="#about"
@@ -158,21 +166,21 @@ export default function Navbar() {
               About
             </a>
 
-            <a
+            <Link
               href="/bridal"
               className="py-4 text-lg"
               onClick={() => setMenuOpen(false)}
             >
               Bridal
-            </a>
+            </Link>
 
-            <a
-              href="#gallery"
+            <Link
+              href="/gallery"
               className="py-4 text-lg"
               onClick={() => setMenuOpen(false)}
             >
               Gallery
-            </a>
+            </Link>
 
             <a
               href="#contact"
