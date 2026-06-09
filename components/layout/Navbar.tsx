@@ -143,7 +143,7 @@ export default function Navbar() {
           <nav className="flex flex-col p-6">
 
             <a
-              href="#services"
+              href="/services"
               className="py-4 text-lg"
               onClick={() => setMenuOpen(false)}
             >
