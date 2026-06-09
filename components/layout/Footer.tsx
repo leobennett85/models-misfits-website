@@ -5,6 +5,7 @@ export default function Footer() {
 
         <div className="grid gap-12 lg:grid-cols-4">
 
+          {/* Brand */}
           <div>
             <h3 className="mb-6 text-3xl font-bold">
               Models + Misfits
@@ -16,6 +17,7 @@ export default function Footer() {
             </p>
           </div>
 
+          {/* Services */}
           <div>
             <h4 className="mb-6 text-lg font-semibold text-[#c8a45d]">
               Services
@@ -29,15 +31,23 @@ export default function Footer() {
             </ul>
           </div>
 
+          {/* Contact */}
           <div>
             <h4 className="mb-6 text-lg font-semibold text-[#c8a45d]">
               Contact
             </h4>
 
             <ul className="space-y-3 text-slate-300">
-              <li>St. John&apos;s, Newfoundland</li>
-              <li>(709) XXX-XXXX</li>
-              <li>hello@modelsandmisfits.ca</li>
+              <li>(709) 693-8456</li>
+
+              <li>
+                <a
+                  href="mailto:modelsandmisfitssalonandspa@gmail.com"
+                  className="hover:text-[#c8a45d]"
+                >
+                  modelsandmisfitssalonandspa@gmail.com
+                </a>
+              </li>
 
               <li>
                 <a
@@ -52,15 +62,18 @@ export default function Footer() {
             </ul>
           </div>
 
+          {/* Location */}
           <div>
             <h4 className="mb-6 text-lg font-semibold text-[#c8a45d]">
-              Hours
+              Location
             </h4>
 
             <ul className="space-y-3 text-slate-300">
-              <li>Mon - Fri: 9am - 6pm</li>
-              <li>Saturday: 9am - 4pm</li>
-              <li>Sunday: By Appointment</li>
+              <li>910 Topsail Road</li>
+              <li>Suite 7</li>
+              <li>Majestic Salon Suites</li>
+              <li>St. John&apos;s, NL</li>
+              <li>Canada</li>
             </ul>
           </div>
 
@@ -75,13 +88,25 @@ export default function Footer() {
           </p>
 
           <div className="flex gap-6">
-            <a href="#" className="transition hover:text-[#c8a45d]">
+
+            <a
+              href="https://www.instagram.com/models.misfits/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transition hover:text-[#c8a45d]"
+            >
               Instagram
             </a>
 
-            <a href="#" className="transition hover:text-[#c8a45d]">
+            <a
+              href="https://www.facebook.com/modelsandmisfits"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transition hover:text-[#c8a45d]"
+            >
               Facebook
             </a>
+
           </div>
 
         </div>

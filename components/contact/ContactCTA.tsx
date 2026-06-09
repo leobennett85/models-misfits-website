@@ -48,39 +48,43 @@ export default function ContactCTA() {
 </a>
 
         <div
-          className="
-            mt-16
-            flex
-            flex-col
-            items-center
-            justify-center
-            gap-6
-            text-slate-300
-            md:flex-row
-            md:gap-12
-          "
-        >
-          <a
-            href="#"
-            className="transition hover:text-[#c8a45d]"
-          >
-            Instagram
-          </a>
+  className="
+    mt-16
+    flex
+    flex-col
+    items-center
+    justify-center
+    gap-6
+    text-slate-300
+    md:flex-row
+    md:gap-12
+  "
+>
+  <a
+    href="https://www.instagram.com/models.misfits/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="transition hover:text-[#c8a45d]"
+  >
+    Instagram
+  </a>
 
-          <a
-            href="#"
-            className="transition hover:text-[#c8a45d]"
-          >
-            Facebook
-          </a>
+  <a
+    href="https://www.facebook.com/modelsandmisfits"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="transition hover:text-[#c8a45d]"
+  >
+    Facebook
+  </a>
 
-          <a
-            href="tel:+17095551234"
-            className="transition hover:text-[#c8a45d]"
-          >
-            (709) 555-1234
-          </a>
-        </div>
+  <a
+    href="tel:+17096938456"
+    className="transition hover:text-[#c8a45d]"
+  >
+    (709) 693-8456
+  </a>
+</div>
 
       </div>
     </section>
