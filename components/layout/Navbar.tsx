@@ -22,6 +22,7 @@ export default function Navbar() {
       <div className="mx-auto max-w-7xl px-6">
         <div className="flex h-24 items-center justify-between">
 
+          {/* Logo */}
           <Link href="/" className="flex items-center">
             <Image
               src="/logos/MMLogo-v2.png"
@@ -38,52 +39,77 @@ export default function Navbar() {
             />
           </Link>
 
+          {/* Desktop Navigation */}
           <nav className="hidden items-center gap-10 md:flex">
 
             <Link
               href="/"
-              className="text-sm uppercase tracking-wider transition hover:text-[#c8a45d]"
+              className="
+                text-sm
+                uppercase
+                tracking-wider
+                transition
+                hover:text-[#c8a45d]
+              "
             >
               Home
             </Link>
 
             <Link
               href="/services"
-              className="text-sm uppercase tracking-wider transition hover:text-[#c8a45d]"
+              className="
+                text-sm
+                uppercase
+                tracking-wider
+                transition
+                hover:text-[#c8a45d]
+              "
             >
               Services
             </Link>
 
-            <a
-              href="#about"
-              className="text-sm uppercase tracking-wider transition hover:text-[#c8a45d]"
-            >
-              About
-            </a>
-
             <Link
               href="/bridal"
-              className="text-sm uppercase tracking-wider transition hover:text-[#c8a45d]"
+              className="
+                text-sm
+                uppercase
+                tracking-wider
+                transition
+                hover:text-[#c8a45d]
+              "
             >
               Bridal
             </Link>
 
             <Link
               href="/gallery"
-              className="text-sm uppercase tracking-wider transition hover:text-[#c8a45d]"
+              className="
+                text-sm
+                uppercase
+                tracking-wider
+                transition
+                hover:text-[#c8a45d]
+              "
             >
               Gallery
             </Link>
 
-            <a
-              href="#contact"
-              className="text-sm uppercase tracking-wider transition hover:text-[#c8a45d]"
+            <Link
+              href="/#contact"
+              className="
+                text-sm
+                uppercase
+                tracking-wider
+                transition
+                hover:text-[#c8a45d]
+              "
             >
               Contact
-            </a>
+            </Link>
 
           </nav>
 
+          {/* Desktop CTA */}
           <a
             href="https://www.vagaro.com/modelsandmisfitssalonandspa/book-now"
             target="_blank"
@@ -107,6 +133,7 @@ export default function Navbar() {
             Book Now
           </a>
 
+          {/* Mobile Menu Button */}
           <button
             onClick={() => setMenuOpen(!menuOpen)}
             className="
@@ -131,6 +158,7 @@ export default function Navbar() {
         </div>
       </div>
 
+      {/* Mobile Menu */}
       {menuOpen && (
         <div
           className="
@@ -158,14 +186,6 @@ export default function Navbar() {
               Services
             </Link>
 
-            <a
-              href="#about"
-              className="py-4 text-lg"
-              onClick={() => setMenuOpen(false)}
-            >
-              About
-            </a>
-
             <Link
               href="/bridal"
               className="py-4 text-lg"
@@ -182,13 +202,13 @@ export default function Navbar() {
               Gallery
             </Link>
 
-            <a
-              href="#contact"
+            <Link
+              href="/#contact"
               className="py-4 text-lg"
               onClick={() => setMenuOpen(false)}
             >
               Contact
-            </a>
+            </Link>
 
             <a
               href="https://www.vagaro.com/modelsandmisfitssalonandspa/book-now"

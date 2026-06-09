@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section
+    <section id="top"
       className="
         relative
         flex
