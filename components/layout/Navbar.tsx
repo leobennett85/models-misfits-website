@@ -159,7 +159,7 @@ export default function Navbar() {
             </a>
 
             <a
-              href="#bridal"
+              href="/bridal"
               className="py-4 text-lg"
               onClick={() => setMenuOpen(false)}
             >
