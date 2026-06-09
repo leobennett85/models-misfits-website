@@ -1,9 +1,95 @@
 export default function Footer() {
   return (
-    <footer>
-      <p>
-        © Models + Misfits Salon and Spa
-      </p>
+    <footer className="bg-[#111827] text-white">
+
+      <div className="mx-auto max-w-7xl px-6 py-20">
+
+        <div className="grid gap-16 lg:grid-cols-4">
+
+          {/* Brand */}
+          <div>
+            <h3 className="mb-6 text-3xl font-bold">
+              Models + Misfits
+            </h3>
+
+            <p className="leading-relaxed text-slate-300">
+              Luxury salon and spa experiences specializing in vivid color,
+              bridal beauty, dimensional blonding, and personalized styling.
+            </p>
+          </div>
+
+          {/* Services */}
+          <div>
+            <h4 className="mb-6 text-lg font-semibold text-[#c8a45d]">
+              Services
+            </h4>
+
+            <ul className="space-y-3 text-slate-300">
+              <li>Hair Color</li>
+              <li>Bridal Beauty</li>
+              <li>Extensions</li>
+              <li>Styling</li>
+            </ul>
+          </div>
+
+          {/* Contact */}
+          <div>
+            <h4 className="mb-6 text-lg font-semibold text-[#c8a45d]">
+              Contact
+            </h4>
+
+            <ul className="space-y-3 text-slate-300">
+              <li>St. John's, Newfoundland</li>
+              <li>(709) XXX-XXXX</li>
+              <li>hello@modelsandmisfits.ca</li>
+            </ul>
+          </div>
+
+          {/* Hours */}
+          <div>
+            <h4 className="mb-6 text-lg font-semibold text-[#c8a45d]">
+              Hours
+            </h4>
+
+            <ul className="space-y-3 text-slate-300">
+              <li>Mon - Fri: 9am - 6pm</li>
+              <li>Saturday: 9am - 4pm</li>
+              <li>Sunday: By Appointment</li>
+            </ul>
+          </div>
+
+        </div>
+
+        {/* Divider */}
+        <div className="my-12 h-px bg-white/10" />
+
+        {/* Bottom */}
+        <div className="flex flex-col items-center justify-between gap-4 text-sm text-slate-400 md:flex-row">
+
+          <p>
+            © {new Date().getFullYear()} Models + Misfits Salon + Spa
+          </p>
+
+          <div className="flex gap-6">
+            <a
+              href="#"
+              className="transition hover:text-[#c8a45d]"
+            >
+              Instagram
+            </a>
+
+            <a
+              href="#"
+              className="transition hover:text-[#c8a45d]"
+            >
+              Facebook
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+
     </footer>
   );
 }
