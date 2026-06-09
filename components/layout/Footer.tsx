@@ -1,10 +1,9 @@
 export default function Footer() {
   return (
     <footer className="bg-[#111827] text-white">
+      <div className="mx-auto max-w-7xl px-6 py-28">
 
-      <div className="mx-auto max-w-7xl px-6 py-20">
-
-        <div className="grid gap-16 lg:grid-cols-4">
+        <div className="grid gap-12 lg:grid-cols-4">
 
           {/* Brand */}
           <div>
@@ -39,7 +38,7 @@ export default function Footer() {
             </h4>
 
             <ul className="space-y-3 text-slate-300">
-              <li>St. John's, Newfoundland</li>
+              <li>St. John&apos;s, Newfoundland</li>
               <li>(709) XXX-XXXX</li>
               <li>hello@modelsandmisfits.ca</li>
             </ul>
@@ -60,10 +59,8 @@ export default function Footer() {
 
         </div>
 
-        {/* Divider */}
         <div className="my-12 h-px bg-white/10" />
 
-        {/* Bottom */}
         <div className="flex flex-col items-center justify-between gap-4 text-sm text-slate-400 md:flex-row">
 
           <p>
@@ -89,7 +86,6 @@ export default function Footer() {
         </div>
 
       </div>
-
     </footer>
   );
 }

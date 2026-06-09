@@ -29,7 +29,7 @@ const galleryImages = [
 
 export default function GallerySection() {
   return (
-    <section className="bg-[#f8f6f2] pt-40 pb-32">
+    <section id="gallery" className="bg-[#f8f6f2] pt-40 pb-32">
       <div className="mx-auto max-w-[1800px] px-8 lg:px-20">
 
         {/* Divider */}

@@ -4,6 +4,7 @@ import AboutSection from "@/components/about/AboutSection";
 import BridalSection from "@/components/bridal/BridalSection";
 import TestimonialsSection from "@/components/testimonials/TestimonialsSection";
 import GallerySection from "@/components/gallery/GallerySection";
+import ContactCTA from "@/components/contact/ContactCTA";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <BridalSection />
       <TestimonialsSection />
       <GallerySection />
+      <ContactCTA />
     </>
   );
 }

@@ -1,6 +1,6 @@
 export default function AboutSection() {
   return (
-    <section className="bg-[#f8f6f2] py-32">
+    <section id="about" className="bg-[#f8f6f2] py-32">
       <div className="mx-auto max-w-7xl px-6">
 
         {/* Divider */}

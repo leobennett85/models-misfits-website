@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function BridalSection() {
   return (
-    <section className="bg-white py-32">
+    <section id="bridal" className="bg-white py-32">
       <div className="mx-auto max-w-7xl px-6">
 
         {/* Divider */}

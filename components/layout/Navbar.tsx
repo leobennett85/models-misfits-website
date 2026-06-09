@@ -1,62 +1,202 @@
+"use client";
+
+import { useState } from "react";
+import Image from "next/image";
+import Link from "next/link";
+
 export default function Navbar() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
-    <nav
-  className="
-    sticky
-    top-0
-    z-50
-    border-b
-    border-[#e6ddd1]
-    bg-[#f8f4ef]
-  "
->
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
+    <header
+      className="
+        sticky
+        top-0
+        z-50
+        border-b
+        border-[#c8a45d]/10
+        bg-[#f8f6f2]/90
+        backdrop-blur-md
+      "
+    >
+      <div className="mx-auto max-w-7xl px-6">
 
-        <h2 className="text-2xl font-bold tracking-wide">
-          Models + Misfits
-        </h2>
+        <div className="flex h-24 items-center justify-between">
 
-        <ul className="hidden gap-8 md:flex">
-          <li className="cursor-pointer hover:text-[#c8a45d]">
-            Home
-          </li>
+          {/* Logo */}
+<Link href="/" className="flex items-center">
+  <Image
+    src="/logos/MMLogo-v2.png"
+    alt="Models + Misfits Salon + Spa"
+    width={220}
+    height={80}
+    priority
+    className="
+      h-auto
+      w-[120px]
+      md:w-[180px]
+      lg:w-[220px]
+    "
+  />
+</Link>
 
-          <li className="cursor-pointer hover:text-[#c8a45d]">
-            Services
-          </li>
+          {/* Desktop Navigation */}
+          <nav className="hidden items-center gap-10 md:flex">
 
-          <li className="cursor-pointer hover:text-[#c8a45d]">
-            Bridal
-          </li>
+            <a
+              href="#services"
+              className="text-sm uppercase tracking-wider hover:text-[#c8a45d]"
+            >
+              Services
+            </a>
 
-          <li className="cursor-pointer hover:text-[#c8a45d]">
-            Gallery
-          </li>
+            <a
+              href="#about"
+              className="text-sm uppercase tracking-wider hover:text-[#c8a45d]"
+            >
+              About
+            </a>
 
-          <li className="cursor-pointer hover:text-[#c8a45d]">
-            Products
-          </li>
+            <a
+              href="#bridal"
+              className="text-sm uppercase tracking-wider hover:text-[#c8a45d]"
+            >
+              Bridal
+            </a>
 
-          <li className="cursor-pointer hover:text-[#c8a45d]">
-            Contact
-          </li>
-        </ul>
+            <a
+              href="#gallery"
+              className="text-sm uppercase tracking-wider hover:text-[#c8a45d]"
+            >
+              Gallery
+            </a>
 
-        <button
-          className="
-            rounded-md
-            bg-[#c8a45d]
-            px-5
-            py-2
-            text-white
-            transition
-            hover:opacity-90
-          "
-        >
-          Book Now
-        </button>
+            <a
+              href="#contact"
+              className="text-sm uppercase tracking-wider hover:text-[#c8a45d]"
+            >
+              Contact
+            </a>
+
+          </nav>
+
+          {/* Desktop CTA */}
+          <a
+            href="#contact"
+            className="
+              hidden
+              rounded-full
+              bg-[#c8a45d]
+              px-6
+              py-3
+              text-sm
+              font-medium
+              text-white
+              transition-all
+              duration-300
+              hover:scale-105
+              hover:shadow-lg
+              md:block
+            "
+          >
+            Book Now
+          </a>
+
+          {/* Mobile Menu Button */}
+          <button
+            onClick={() => setMenuOpen(!menuOpen)}
+            className="
+              flex
+              h-12
+              w-12
+              items-center
+              justify-center
+              rounded-full
+              border
+              border-[#c8a45d]/20
+              md:hidden
+            "
+          >
+            <span className="text-2xl">
+              {menuOpen ? "✕" : "☰"}
+            </span>
+          </button>
+
+        </div>
 
       </div>
-    </nav>
+
+      {/* Mobile Menu */}
+      {menuOpen && (
+        <div
+          className="
+            border-t
+            border-[#c8a45d]/10
+            bg-[#f8f6f2]
+            md:hidden
+          "
+        >
+          <nav className="flex flex-col p-6">
+
+            <a
+              href="#services"
+              className="py-4 text-lg"
+              onClick={() => setMenuOpen(false)}
+            >
+              Services
+            </a>
+
+            <a
+              href="#about"
+              className="py-4 text-lg"
+              onClick={() => setMenuOpen(false)}
+            >
+              About
+            </a>
+
+            <a
+              href="#bridal"
+              className="py-4 text-lg"
+              onClick={() => setMenuOpen(false)}
+            >
+              Bridal
+            </a>
+
+            <a
+              href="#gallery"
+              className="py-4 text-lg"
+              onClick={() => setMenuOpen(false)}
+            >
+              Gallery
+            </a>
+
+            <a
+              href="#contact"
+              className="py-4 text-lg"
+              onClick={() => setMenuOpen(false)}
+            >
+              Contact
+            </a>
+
+            <a
+              href="#contact"
+              onClick={() => setMenuOpen(false)}
+              className="
+                mt-6
+                rounded-full
+                bg-[#c8a45d]
+                px-6
+                py-4
+                text-center
+                text-white
+              "
+            >
+              Book Now
+            </a>
+
+          </nav>
+        </div>
+      )}
+    </header>
   );
 }

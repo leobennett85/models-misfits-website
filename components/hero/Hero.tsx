@@ -79,7 +79,7 @@ export default function Hero() {
         "
       />
 
-      {/* Gold Glow */}
+      {/* Glow */}
       <div
         className="
           absolute
@@ -153,11 +153,12 @@ export default function Hero() {
 
         <p
           className="
-            mb-10
-            max-w-2xl
+            mb-12
+            max-w-3xl
             text-lg
             leading-relaxed
-            text-[#5c6c7d]
+            text-[#3f536d]
+            md:text-xl
           "
         >
           Where bold creativity meets luxury beauty. Specializing in

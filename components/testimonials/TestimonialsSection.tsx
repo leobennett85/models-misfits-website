@@ -21,12 +21,9 @@ export default function TestimonialsSection() {
     <section className="bg-[#faf8f4] py-32">
       <div className="mx-auto max-w-7xl px-6">
 
-        {/* Divider */}
         <div className="mx-auto mb-20 h-px max-w-5xl bg-[#c8a45d]/20" />
 
-        {/* Heading */}
         <div className="mb-20 text-center">
-
           <p className="mb-4 uppercase tracking-[0.35em] text-[#c8a45d]">
             Client Love
           </p>
@@ -39,21 +36,19 @@ export default function TestimonialsSection() {
             Creating beautiful hair is only part of what we do.
             Building confidence is what matters most.
           </p>
-
         </div>
 
-        {/* Cards */}
-        <div className="grid gap-10 lg:grid-cols-3">
-
+        <div className="grid gap-8 lg:grid-cols-3">
           {testimonials.map((testimonial) => (
             <div
               key={testimonial.name}
               className="
+                min-h-[320px]
                 rounded-3xl
                 border
                 border-[#c8a45d]/15
                 bg-[#faf8f4]
-                p-10
+                p-12
                 shadow-sm
                 transition-all
                 duration-300
@@ -71,13 +66,33 @@ export default function TestimonialsSection() {
 
               <div className="h-px w-12 bg-[#c8a45d]" />
 
-              <p className="mt-6 font-semibold text-slate-900">
-                {testimonial.name}
-              </p>
+              <div className="mt-8 flex items-center gap-4">
+                <div
+                  className="
+                    flex
+                    h-12
+                    w-12
+                    items-center
+                    justify-center
+                    rounded-full
+                    bg-[#c8a45d]/10
+                    font-semibold
+                    text-[#c8a45d]
+                  "
+                >
+                  {testimonial.name
+                    .split(" ")
+                    .map((part) => part[0])
+                    .join("")}
+                </div>
+
+                <p className="font-semibold text-slate-900">
+                  {testimonial.name}
+                </p>
+              </div>
 
             </div>
           ))}
-
         </div>
 
       </div>
