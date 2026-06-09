@@ -104,7 +104,7 @@ export default function ServicesPage() {
         </h2>
 
         <p className="mx-auto mb-10 max-w-2xl text-slate-300">
-          Book your consultation today and let's create something amazing.
+          Book your consultation today and let&apos;s create something amazing.
         </p>
 
         <a
