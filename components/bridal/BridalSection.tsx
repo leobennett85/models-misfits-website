@@ -85,21 +85,24 @@ export default function BridalSection() {
 
             </div>
 
-            <button
-              className="
-                rounded-full
-                bg-[#c8a45d]
-                px-8
-                py-4
-                text-white
-                transition-all
-                duration-300
-                hover:scale-105
-                hover:shadow-lg
-              "
-            >
-              Book Bridal Consultation
-            </button>
+            <a
+  href="https://www.vagaro.com/modelsandmisfitssalonandspa/book-now"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="
+    rounded-full
+    bg-[#c8a45d]
+    px-8
+    py-4
+    text-white
+    transition-all
+    duration-300
+    hover:scale-105
+    hover:shadow-lg
+  "
+>
+  Book Bridal Consultation
+</a>
 
           </div>
 

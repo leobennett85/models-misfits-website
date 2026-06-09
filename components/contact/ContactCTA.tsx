@@ -24,26 +24,28 @@ export default function ContactCTA() {
           help bring your vision to life.
         </p>
 
-        <a
-          href="#"
-          className="
-            inline-flex
-            items-center
-            rounded-full
-            bg-[#c8a45d]
-            px-10
-            py-5
-            text-lg
-            font-medium
-            text-white
-            transition-all
-            duration-300
-            hover:scale-105
-            hover:shadow-2xl
-          "
-        >
-          Book Consultation
-        </a>
+       <a
+  href="https://www.vagaro.com/modelsandmisfitssalonandspa/book-now"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="
+    inline-flex
+    items-center
+    rounded-full
+    bg-[#c8a45d]
+    px-10
+    py-5
+    text-lg
+    font-medium
+    text-white
+    transition-all
+    duration-300
+    hover:scale-105
+    hover:shadow-2xl
+  "
+>
+  Book Consultation
+</a>
 
         <div
           className="

@@ -24,56 +24,56 @@ export default function Navbar() {
         <div className="flex h-24 items-center justify-between">
 
           {/* Logo */}
-<Link href="/" className="flex items-center">
-  <Image
-    src="/logos/MMLogo-v2.png"
-    alt="Models + Misfits Salon + Spa"
-    width={220}
-    height={80}
-    priority
-    className="
-      h-auto
-      w-[120px]
-      md:w-[180px]
-      lg:w-[220px]
-    "
-  />
-</Link>
+          <Link href="/" className="flex items-center">
+            <Image
+              src="/logos/MMLogo-v2.png"
+              alt="Models + Misfits Salon + Spa"
+              width={220}
+              height={80}
+              priority
+              className="
+                h-auto
+                w-[120px]
+                md:w-[180px]
+                lg:w-[220px]
+              "
+            />
+          </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden items-center gap-10 md:flex">
 
             <a
               href="#services"
-              className="text-sm uppercase tracking-wider hover:text-[#c8a45d]"
+              className="text-sm uppercase tracking-wider transition hover:text-[#c8a45d]"
             >
               Services
             </a>
 
             <a
               href="#about"
-              className="text-sm uppercase tracking-wider hover:text-[#c8a45d]"
+              className="text-sm uppercase tracking-wider transition hover:text-[#c8a45d]"
             >
               About
             </a>
 
             <a
               href="#bridal"
-              className="text-sm uppercase tracking-wider hover:text-[#c8a45d]"
+              className="text-sm uppercase tracking-wider transition hover:text-[#c8a45d]"
             >
               Bridal
             </a>
 
             <a
               href="#gallery"
-              className="text-sm uppercase tracking-wider hover:text-[#c8a45d]"
+              className="text-sm uppercase tracking-wider transition hover:text-[#c8a45d]"
             >
               Gallery
             </a>
 
             <a
               href="#contact"
-              className="text-sm uppercase tracking-wider hover:text-[#c8a45d]"
+              className="text-sm uppercase tracking-wider transition hover:text-[#c8a45d]"
             >
               Contact
             </a>
@@ -82,7 +82,9 @@ export default function Navbar() {
 
           {/* Desktop CTA */}
           <a
-            href="#contact"
+            href="https://www.vagaro.com/modelsandmisfitssalonandspa/book-now"
+            target="_blank"
+            rel="noopener noreferrer"
             className="
               hidden
               rounded-full
@@ -114,6 +116,8 @@ export default function Navbar() {
               rounded-full
               border
               border-[#c8a45d]/20
+              transition
+              hover:border-[#c8a45d]
               md:hidden
             "
           >
@@ -179,7 +183,9 @@ export default function Navbar() {
             </a>
 
             <a
-              href="#contact"
+              href="https://www.vagaro.com/modelsandmisfitssalonandspa/book-now"
+              target="_blank"
+              rel="noopener noreferrer"
               onClick={() => setMenuOpen(false)}
               className="
                 mt-6
@@ -189,6 +195,9 @@ export default function Navbar() {
                 py-4
                 text-center
                 text-white
+                transition-all
+                duration-300
+                hover:scale-[1.02]
               "
             >
               Book Now

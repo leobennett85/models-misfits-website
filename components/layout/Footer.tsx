@@ -5,7 +5,6 @@ export default function Footer() {
 
         <div className="grid gap-12 lg:grid-cols-4">
 
-          {/* Brand */}
           <div>
             <h3 className="mb-6 text-3xl font-bold">
               Models + Misfits
@@ -17,7 +16,6 @@ export default function Footer() {
             </p>
           </div>
 
-          {/* Services */}
           <div>
             <h4 className="mb-6 text-lg font-semibold text-[#c8a45d]">
               Services
@@ -31,7 +29,6 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Contact */}
           <div>
             <h4 className="mb-6 text-lg font-semibold text-[#c8a45d]">
               Contact
@@ -41,10 +38,20 @@ export default function Footer() {
               <li>St. John&apos;s, Newfoundland</li>
               <li>(709) XXX-XXXX</li>
               <li>hello@modelsandmisfits.ca</li>
+
+              <li>
+                <a
+                  href="https://www.vagaro.com/modelsandmisfitssalonandspa/book-now"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-[#c8a45d]"
+                >
+                  Book Online
+                </a>
+              </li>
             </ul>
           </div>
 
-          {/* Hours */}
           <div>
             <h4 className="mb-6 text-lg font-semibold text-[#c8a45d]">
               Hours
@@ -68,17 +75,11 @@ export default function Footer() {
           </p>
 
           <div className="flex gap-6">
-            <a
-              href="#"
-              className="transition hover:text-[#c8a45d]"
-            >
+            <a href="#" className="transition hover:text-[#c8a45d]">
               Instagram
             </a>
 
-            <a
-              href="#"
-              className="transition hover:text-[#c8a45d]"
-            >
+            <a href="#" className="transition hover:text-[#c8a45d]">
               Facebook
             </a>
           </div>

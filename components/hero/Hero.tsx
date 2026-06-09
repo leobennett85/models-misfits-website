@@ -13,7 +13,6 @@ export default function Hero() {
         px-6
       "
     >
-      {/* Hero 1 */}
       <Image
         src="/hero/hero-1.png"
         alt=""
@@ -35,7 +34,6 @@ export default function Hero() {
         "
       />
 
-      {/* Hero 2 */}
       <Image
         src="/hero/hero-2.png"
         alt=""
@@ -57,7 +55,6 @@ export default function Hero() {
         "
       />
 
-      {/* Hero 3 */}
       <Image
         src="/hero/hero-3.png"
         alt=""
@@ -79,7 +76,6 @@ export default function Hero() {
         "
       />
 
-      {/* Glow */}
       <div
         className="
           absolute
@@ -97,7 +93,6 @@ export default function Hero() {
         "
       />
 
-      {/* Content */}
       <div
         className="
           relative
@@ -167,12 +162,17 @@ export default function Hero() {
         </p>
 
         <div className="flex flex-col gap-4 sm:flex-row">
-          <button
+
+          <a
+            href="https://www.vagaro.com/modelsandmisfitssalonandspa/book-now"
+            target="_blank"
+            rel="noopener noreferrer"
             className="
               rounded-md
               bg-[#c8a45d]
               px-8
               py-4
+              text-center
               text-white
               transition-all
               duration-300
@@ -181,15 +181,17 @@ export default function Hero() {
             "
           >
             Book Your Transformation
-          </button>
+          </a>
 
-          <button
+          <a
+            href="#gallery"
             className="
               rounded-md
               border
               border-[#c8a45d]
               px-8
               py-4
+              text-center
               text-[#c8a45d]
               transition-all
               duration-300
@@ -198,8 +200,10 @@ export default function Hero() {
             "
           >
             View Our Work
-          </button>
+          </a>
+
         </div>
+
       </div>
     </section>
   );
