@@ -9,15 +9,7 @@ export default function Navbar() {
 
   return (
     <header
-      className="
-        sticky
-        top-0
-        z-50
-        border-b
-        border-[#c8a45d]/10
-        bg-[#f8f6f2]/90
-        backdrop-blur-md
-      "
+      className="sticky top-0 z-50 border-b border-[#c8a45d]/10 bg-[#f8f6f2]/90 backdrop-blur-md"
     >
       <div className="mx-auto max-w-7xl px-6">
         <div className="flex h-24 items-center justify-between">
@@ -30,12 +22,7 @@ export default function Navbar() {
               width={220}
               height={80}
               priority
-              className="
-                h-auto
-                w-[120px]
-                md:w-[180px]
-                lg:w-[220px]
-              "
+              className="h-auto w-[120px] md:w-[180px] lg:w-[220px]"
             />
           </Link>
 
@@ -44,13 +31,7 @@ export default function Navbar() {
 
             <Link
               href="/"
-              className="
-                text-sm
-                uppercase
-                tracking-wider
-                transition
-                hover:text-[#c8a45d]
-              "
+              className="text-sm uppercase tracking-wider transition hover:text-[#c8a45d]"
             >
               Home
             </Link>

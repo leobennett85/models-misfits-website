@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from "react";
 import AnimatedSignature from "./AnimatedSignature";
-import Signature from "@/components/logo/Signature";
 
 interface AnimatedLogoIntroProps {
   onComplete: () => void;
@@ -60,12 +59,7 @@ export default function AnimatedLogoIntro({
       >
         {/* <AnimatedSignature /> */}
 
-<Signature
-  width={900}
-  style={{
-    color: "#4E647C",
-  }}
-/>
+<AnimatedSignature />
       </div>
     </div>
   );
