@@ -16,7 +16,6 @@ export default function BridalPage() {
       {/* HERO */}
       <section className="relative overflow-hidden px-6 py-32">
 
-        {/* Glow */}
         <div
           className="
             absolute
@@ -36,7 +35,6 @@ export default function BridalPage() {
 
           <div className="grid items-center gap-16 lg:grid-cols-2">
 
-            {/* Content */}
             <div>
 
               <p className="mb-4 uppercase tracking-[0.4em] text-[#c8a45d]">
@@ -59,9 +57,10 @@ export default function BridalPage() {
               </h1>
 
               <p className="mb-10 max-w-2xl text-xl leading-relaxed text-slate-600">
-                From timeless elegance to vivid creative expression,
-                every bridal style is customized to reflect your personality,
-                your vision, and your most unforgettable day.
+                Bridal hair in St. John&apos;s, Newfoundland designed for
+                weddings, bridal parties, formal events, and unforgettable
+                celebrations. Every style is tailored to your vision,
+                personality, and special day.
               </p>
 
               <div className="flex flex-col gap-4 sm:flex-row">
@@ -108,7 +107,6 @@ export default function BridalPage() {
 
             </div>
 
-            {/* Hero Image */}
             <div className="relative">
 
               <div
@@ -123,15 +121,11 @@ export default function BridalPage() {
 
               <Image
                 src="/bridal/bridal-2.jpg"
-                alt="Bridal Hairstyling"
+                alt="Luxury bridal hairstyling"
                 width={1200}
                 height={1600}
                 priority
-                className="
-                  relative
-                  rounded-[3rem]
-                  shadow-2xl
-                "
+                className="relative rounded-[3rem] shadow-2xl"
               />
 
             </div>
@@ -165,7 +159,6 @@ export default function BridalPage() {
               <h3 className="mb-3 text-5xl font-bold text-[#c8a45d]">
                 10+
               </h3>
-
               <p className="text-slate-600">
                 Years Creating Beautiful Bridal Looks
               </p>
@@ -175,7 +168,6 @@ export default function BridalPage() {
               <h3 className="mb-3 text-5xl font-bold text-[#c8a45d]">
                 100%
               </h3>
-
               <p className="text-slate-600">
                 Personalized Consultations
               </p>
@@ -185,9 +177,8 @@ export default function BridalPage() {
               <h3 className="mb-3 text-5xl font-bold text-[#c8a45d]">
                 Luxury
               </h3>
-
               <p className="text-slate-600">
-                Bridal Experience
+                Wedding Day Experience
               </p>
             </div>
 
@@ -220,10 +211,9 @@ export default function BridalPage() {
               <h3 className="mb-4 text-2xl font-bold text-slate-900">
                 01 Consultation
               </h3>
-
               <p className="text-slate-600">
-                We discuss your vision, dress, venue, accessories,
-                and wedding aesthetic.
+                We discuss your vision, dress, venue, wedding theme,
+                accessories, and desired look.
               </p>
             </div>
 
@@ -231,9 +221,9 @@ export default function BridalPage() {
               <h3 className="mb-4 text-2xl font-bold text-slate-900">
                 02 Trial Styling
               </h3>
-
               <p className="text-slate-600">
-                Refine and perfect your bridal look before the big day.
+                Together we refine every detail so your wedding-day style
+                feels perfect.
               </p>
             </div>
 
@@ -241,11 +231,105 @@ export default function BridalPage() {
               <h3 className="mb-4 text-2xl font-bold text-slate-900">
                 03 Wedding Day
               </h3>
-
               <p className="text-slate-600">
-                Relax and enjoy a luxury styling experience designed around you.
+                Relax and enjoy a luxury styling experience while we bring
+                your vision to life.
               </p>
             </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      {/* SERVICES */}
+      <section className="px-6 pb-32">
+
+        <div className="mx-auto max-w-7xl">
+
+          <div className="mb-16 text-center">
+
+            <p className="mb-4 uppercase tracking-[0.35em] text-[#c8a45d]">
+              Bridal Services
+            </p>
+
+            <h2 className="text-5xl font-bold text-slate-900">
+              Customized Wedding Styling
+            </h2>
+
+          </div>
+
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+
+            <div className="rounded-3xl bg-white p-8 shadow-sm">
+              <h3 className="mb-4 text-xl font-bold">
+                Bridal Consultation
+              </h3>
+              <p className="text-slate-600">
+                Personalized planning tailored to your wedding vision.
+              </p>
+            </div>
+
+            <div className="rounded-3xl bg-white p-8 shadow-sm">
+              <h3 className="mb-4 text-xl font-bold">
+                Bridal Trial
+              </h3>
+              <p className="text-slate-600">
+                Perfect your look before the wedding day arrives.
+              </p>
+            </div>
+
+            <div className="rounded-3xl bg-white p-8 shadow-sm">
+              <h3 className="mb-4 text-xl font-bold">
+                Wedding Day Styling
+              </h3>
+              <p className="text-slate-600">
+                Elegant, long-lasting bridal hair designed for photographs
+                and celebrations.
+              </p>
+            </div>
+
+            <div className="rounded-3xl bg-white p-8 shadow-sm">
+              <h3 className="mb-4 text-xl font-bold">
+                Formal Event Styling
+              </h3>
+              <p className="text-slate-600">
+                Bridesmaids, prom, galas, and special occasions.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      {/* FEATURE QUOTE */}
+      <section className="px-6 pb-32">
+
+        <div className="mx-auto max-w-5xl">
+
+          <div
+            className="
+              rounded-[3rem]
+              border
+              border-[#c8a45d]/15
+              bg-white
+              p-16
+              text-center
+              shadow-sm
+            "
+          >
+
+            <p className="mb-8 text-3xl font-light leading-relaxed text-slate-700">
+              “Your wedding style should feel effortless, beautiful,
+              and completely your own.”
+            </p>
+
+            <p className="uppercase tracking-[0.3em] text-[#c8a45d]">
+              Models + Misfits Salon + Spa
+            </p>
 
           </div>
 
@@ -268,9 +352,15 @@ export default function BridalPage() {
               Real Bridal Transformations
             </h2>
 
+            <p className="mx-auto max-w-3xl text-lg text-slate-600">
+              Explore wedding hair, bridal trials, formal styling,
+              romantic updos, and special occasion looks created at
+              Models + Misfits Salon + Spa.
+            </p>
+
           </div>
 
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-8 lg:grid-cols-2">
 
             {bridalGallery.map((image) => (
               <div

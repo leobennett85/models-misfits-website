@@ -1,8 +1,13 @@
 import Image from "next/image";
 
-export default function Hero() {
+export default function Hero({
+  showContent,
+}: {
+  showContent: boolean;
+}) {
   return (
-    <section id="top"
+    <section
+      id="top"
       className="
         relative
         flex
@@ -94,117 +99,139 @@ export default function Hero() {
       />
 
       <div
+  className="
+    relative
+    z-10
+    flex
+    max-w-4xl
+    flex-col
+    items-center
+    text-center
+  "
+>
+  <p
+    className="
+      mb-8
+      text-sm
+      uppercase
+      tracking-[0.4em]
+      text-[#c8a45d]
+      md:text-base
+    "
+  >
+    Models + Misfits Salon + Spa
+  </p>
+
+  <div
+    className={`
+      mb-8
+      transition-all
+      duration-[1200ms]
+      ${
+        showContent
+          ? "opacity-100 translate-y-0"
+          : "opacity-0 translate-y-4"
+      }
+    `}
+  >
+    <Image
+      src="/logos/MMLogo-v2.png"
+      alt="Models + Misfits Salon and Spa"
+      width={800}
+      height={500}
+      priority
+      className="
+        h-auto
+        w-[340px]
+        md:w-[520px]
+        lg:w-[760px]
+      "
+    />
+  </div>
+
+  <div
+    className={`
+      transition-all
+      duration-[1200ms]
+      delay-500
+      ${
+        showContent
+          ? "opacity-100 translate-y-0"
+          : "opacity-0 translate-y-6"
+      }
+    `}
+  >
+    <h2
+      className="
+        mb-6
+        text-xl
+        font-medium
+        tracking-wide
+        text-[#3f536d]
+        md:text-2xl
+      "
+    >
+      Luxury Color • Bridal Beauty • Creative Expression
+    </h2>
+
+    <p
+      className="
+        mb-12
+        max-w-3xl
+        text-lg
+        leading-relaxed
+        text-[#3f536d]
+        md:text-xl
+      "
+    >
+      Where bold creativity meets luxury beauty.
+      Specializing in vivid transformations,
+      dimensional color, bridal styling,
+      and personalized salon experiences.
+    </p>
+
+    <div className="flex flex-col gap-4 sm:flex-row">
+      <a
+        href="https://www.vagaro.com/modelsandmisfitssalonandspa/book-now"
+        target="_blank"
+        rel="noopener noreferrer"
         className="
-          relative
-          z-10
-          flex
-          max-w-4xl
-          flex-col
-          items-center
+          rounded-md
+          bg-[#c8a45d]
+          px-8
+          py-4
           text-center
+          text-white
+          transition-all
+          duration-300
+          hover:scale-105
+          hover:shadow-lg
         "
       >
-        <p
-          className="
-            mb-8
-            text-sm
-            uppercase
-            tracking-[0.4em]
-            text-[#c8a45d]
-            md:text-base
-          "
-        >
-          Models + Misfits Salon + Spa
-        </p>
+        Book Your Transformation
+      </a>
 
-        <div className="mb-8">
-          <Image
-            src="/logos/MMLogo-v2.png"
-            alt="Models + Misfits Salon and Spa"
-            width={800}
-            height={500}
-            priority
-            className="
-              h-auto
-              w-[340px]
-              md:w-[520px]
-              lg:w-[760px]
-            "
-          />
-        </div>
-
-        <h2
-          className="
-            mb-6
-            text-xl
-            font-medium
-            tracking-wide
-            text-[#3f536d]
-            md:text-2xl
-          "
-        >
-          Luxury Color • Bridal Beauty • Creative Expression
-        </h2>
-
-        <p
-          className="
-            mb-12
-            max-w-3xl
-            text-lg
-            leading-relaxed
-            text-[#3f536d]
-            md:text-xl
-          "
-        >
-          Where bold creativity meets luxury beauty. Specializing in
-          vivid transformations, dimensional color, bridal styling,
-          and personalized salon experiences.
-        </p>
-
-        <div className="flex flex-col gap-4 sm:flex-row">
-
-          <a
-            href="https://www.vagaro.com/modelsandmisfitssalonandspa/book-now"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="
-              rounded-md
-              bg-[#c8a45d]
-              px-8
-              py-4
-              text-center
-              text-white
-              transition-all
-              duration-300
-              hover:scale-105
-              hover:shadow-lg
-            "
-          >
-            Book Your Transformation
-          </a>
-
-          <a
-            href="#gallery"
-            className="
-              rounded-md
-              border
-              border-[#c8a45d]
-              px-8
-              py-4
-              text-center
-              text-[#c8a45d]
-              transition-all
-              duration-300
-              hover:bg-[#c8a45d]
-              hover:text-white
-            "
-          >
-            View Our Work
-          </a>
-
-        </div>
-
-      </div>
+      <a
+        href="#gallery"
+        className="
+          rounded-md
+          border
+          border-[#c8a45d]
+          px-8
+          py-4
+          text-center
+          text-[#c8a45d]
+          transition-all
+          duration-300
+          hover:bg-[#c8a45d]
+          hover:text-white
+        "
+      >
+        View Our Work
+      </a>
+    </div>
+  </div>
+</div>
     </section>
   );
 }

@@ -27,3 +27,246 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   min-height: 100vh;
 }
+
+/* ==========================================
+   Models + Misfits Intro Animation
+========================================== */
+
+.m1,
+.m2 {
+  fill: none !important;
+  stroke: #111 !important;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+
+  stroke-dasharray: 3000;
+  stroke-dashoffset: 3000;
+}
+
+.odels,
+.isfits {
+  fill: #111;
+  opacity: 0;
+}
+
+.m1 {
+  animation: writeLogo 1.8s ease forwards;
+}
+
+.m2 {
+  animation: writeLogo 1.8s ease forwards;
+  animation-delay: 0.8s;
+}
+
+.odels {
+  animation: fadeWords 0.6s ease forwards;
+  animation-delay: 1.8s;
+}
+
+.isfits {
+  animation: fadeWords 0.6s ease forwards;
+  animation-delay: 2.2s;
+}
+
+@keyframes writeLogo {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes fadeWords {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes shimmerSweep {
+  0% {
+    transform: translateX(-120%);
+  }
+
+  100% {
+    transform: translateX(220%);
+  }
+}
+
+.shimmer {
+  position: absolute;
+  overflow: hidden;
+}
+
+.shimmer::before {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  bottom: 0;
+
+  width: 140px;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(200, 164, 93, 0.9),
+    transparent
+  );
+
+  transform: translateX(-300px) skewX(-20deg);
+
+  animation: shimmerSweep 1.4s ease-in-out 2.5s forwards;
+}
+
+@keyframes shimmerSweep {
+  to {
+    transform: translateX(2200px) skewX(-20deg);
+  }
+}
+
+/* ==========================================
+   SVG Signature Animation
+========================================== */
+
+.animated-logo svg {
+  overflow: visible;
+  width: 100%;
+  height: auto;
+}
+
+/* Initial State */
+
+.animated-logo path {
+  transform-origin: center;
+}
+
+/* M1 Stroke */
+
+.animated-logo path:nth-of-type(2) {
+  stroke-dasharray: 1200;
+  stroke-dashoffset: 1200;
+
+  animation:
+    drawM1 1.1s ease forwards;
+}
+
+/* Models Text */
+
+.animated-logo path:nth-of-type(1) {
+  opacity: 0;
+
+  animation:
+    revealModels 0.8s ease forwards;
+
+  animation-delay: 1s;
+}
+
+/* M2 Stroke */
+
+.animated-logo path:nth-of-type(4) {
+  stroke-dasharray: 1800;
+  stroke-dashoffset: 1800;
+
+  animation:
+    drawM2 1.2s ease forwards;
+
+  animation-delay: 1.8s;
+}
+
+/* Misfits Text */
+
+.animated-logo path:nth-of-type(3) {
+  opacity: 0;
+
+  animation:
+    revealMisfits 0.8s ease forwards;
+
+  animation-delay: 3s;
+}
+
+/* Keyframes */
+
+@keyframes drawM1 {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes drawM2 {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes revealModels {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes revealMisfits {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* ==========================================
+   MM Signature Animation
+========================================== */
+
+.m1,
+.m2,
+.odels,
+.isfits {
+  fill: none;
+  stroke: #000;
+}
+
+.m1,
+.m2 {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+}
+
+.odels,
+.isfits {
+  opacity: 0;
+}
+
+.m1 {
+  stroke: red !important;
+  fill: none !important;
+}
+
+.odels {
+  fill: red !important;
+  opacity: 1 !important;
+}
+
+.m2 {
+  stroke: blue !important;
+  fill: none !important;
+}
+
+.isfits {
+  fill: blue !important;
+  opacity: 1 !important;
+}
+
+@keyframes drawM {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes fadeWords {
+  to {
+    opacity: 1;
+  }
+}
