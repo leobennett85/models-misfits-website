@@ -1,15 +1,13 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import Signature from "./Signature";
+import useSignatureAnimation from "@/hooks/useSignatureAnimation";
 
 export default function SignatureCanvas() {
   const svgRef = useRef<SVGSVGElement>(null);
 
-  const [penPos, setPenPos] = useState({
-    x: 0,
-    y: 0,
-  });
+  const animation = useSignatureAnimation(4000);
 
   useEffect(() => {
     if (!svgRef.current) return;
@@ -20,34 +18,19 @@ export default function SignatureCanvas() {
 
     const length = m1.getTotalLength();
 
-    let distance = 0;
-    let animationFrame: number;
+    const point = m1.getPointAtLength(
+      animation.progress * length
+    );
 
-    const animate = () => {
-      distance += 1;
+    console.clear();
 
-      if (distance > length) {
-        distance = 0;
-      }
+    console.log("Progress:", animation.progress.toFixed(3));
 
-      const point = m1.getPointAtLength(distance);
-
-      setPenPos({
-        x: point.x,
-        y: point.y,
-      });
-
-      animationFrame = requestAnimationFrame(animate);
-    };
-
-    animate();
-
-    return () => cancelAnimationFrame(animationFrame);
-  }, []);
-
-  useEffect(() => {
-    console.log("Pen Position:", penPos);
-  }, [penPos]);
+    console.log("Point:", {
+      x: point.x.toFixed(2),
+      y: point.y.toFixed(2),
+    });
+  }, [animation.progress]);
 
   return (
     <Signature
