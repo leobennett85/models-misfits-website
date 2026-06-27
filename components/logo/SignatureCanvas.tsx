@@ -1,32 +1,61 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import Signature from "./Signature";
 
 export default function SignatureCanvas() {
-  console.log("SignatureCanvas");
   const svgRef = useRef<SVGSVGElement>(null);
 
+  const [penPos, setPenPos] = useState({
+    x: 0,
+    y: 0,
+  });
+
   useEffect(() => {
-  if (!svgRef.current) return;
+    if (!svgRef.current) return;
 
-  const paths = {
-    m1: svgRef.current.querySelector<SVGPathElement>("#m1"),
-    odels: svgRef.current.querySelector<SVGPathElement>("#odels"),
-    m2: svgRef.current.querySelector<SVGPathElement>("#m2"),
-    isfits: svgRef.current.querySelector<SVGPathElement>("#isfits"),
-  };
+    const m1 = svgRef.current.querySelector<SVGPathElement>("#m1");
 
-  console.log(paths);
-}, []);
+    if (!m1) return;
+
+    const length = m1.getTotalLength();
+
+    let distance = 0;
+    let animationFrame: number;
+
+    const animate = () => {
+      distance += 1;
+
+      if (distance > length) {
+        distance = 0;
+      }
+
+      const point = m1.getPointAtLength(distance);
+
+      setPenPos({
+        x: point.x,
+        y: point.y,
+      });
+
+      animationFrame = requestAnimationFrame(animate);
+    };
+
+    animate();
+
+    return () => cancelAnimationFrame(animationFrame);
+  }, []);
+
+  useEffect(() => {
+    console.log("Pen Position:", penPos);
+  }, [penPos]);
 
   return (
-  <Signature
-    ref={svgRef}
-    width={900}
-    style={{
-      color: "#4E647C",
-    }}
-  />
-);
+    <Signature
+      ref={svgRef}
+      width={900}
+      style={{
+        color: "#4E647C",
+      }}
+    />
+  );
 }
