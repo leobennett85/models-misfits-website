@@ -1,12 +1,16 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import {
+  initializeStroke,
+  updateStroke,
+} from "@/lib/svgAnimation";
 import M1 from "./signature/M1";
 import Models from "./signature/Models";
 import M2 from "./signature/M2";
 import Misfits from "./signature/Misfits";
 
-export default function SignatureCanvas() { {
+export default function SignatureCanvas() {
   const m1Ref = useRef<SVGPathElement>(null);
   const modelsRef = useRef<SVGPathElement>(null);
 
@@ -24,8 +28,7 @@ export default function SignatureCanvas() { {
   });
 
   const [reveal, setReveal] = useState({
-  models: 0,
-  misfits: 0,
+    models: 0,
   });
 
   useEffect(() => {
@@ -33,6 +36,9 @@ export default function SignatureCanvas() { {
   if (!m1Ref.current || !m2Ref.current) return;
 
   const m1 = m1Ref.current;
+  if (!m1) return;
+  const strokeLength = initializeStroke(m1);
+
   const m2 = m2Ref.current;
 
   const m1Length = m1.getTotalLength();
@@ -63,6 +69,11 @@ export default function SignatureCanvas() { {
         m1Length * progress
       );
 
+      updateStroke(
+    m1,
+    progress
+);
+
       setInkPos({
         x: point.x,
         y: point.y,
@@ -70,7 +81,7 @@ export default function SignatureCanvas() { {
 
       setReveal({
         models: Math.min(progress * 26, 26),
-        misfits: 0,
+
       });
     }
     //
@@ -81,29 +92,29 @@ export default function SignatureCanvas() { {
       elapsed <=
       m1Duration + liftDuration
     ) {
-      const progress =
-        (elapsed - m1Duration) /
-        liftDuration;
+        const progress =
+          (elapsed - m1Duration) /
+          liftDuration;
 
-      const arcHeight = -12;
+        const arcHeight = -12;
 
-      const x =
-        m1End.x +
-        (m2Start.x - m1End.x) *
-          progress;
+        const x =
+          m1End.x +
+          (m2Start.x - m1End.x) *
+            progress;
 
-      const y =
-        m1End.y +
-        (m2Start.y - m1End.y) *
-          progress +
-        Math.sin(progress * Math.PI) *
-          arcHeight;
+        const y =
+          m1End.y +
+          (m2Start.y - m1End.y) *
+            progress +
+          Math.sin(progress * Math.PI) *
+            arcHeight;
 
-      setInkPos({
-        x,
-        y,
-      });
-    }
+        setInkPos({
+          x,
+          y,
+        });
+      }
 
     //
     // PHASE 3
@@ -144,10 +155,7 @@ export default function SignatureCanvas() { {
     }
   };
 
-  frame =
-    requestAnimationFrame(
-      animate
-    );
+  frame = requestAnimationFrame(animate);
 
   return () =>
     cancelAnimationFrame(frame);
@@ -183,94 +191,10 @@ export default function SignatureCanvas() { {
         </clipPath>
       </defs>
 
-      <style>{`
-        .draw-m1 {
-          stroke-dasharray: 2000;
-          stroke-dashoffset: 2000;
-          animation: drawM1 2.4s forwards;
-        }
-
-        .draw-m2 {
-          stroke-dasharray: 2500;
-          stroke-dashoffset: 2500;
-          animation: drawM2 1.6s forwards;
-        }
-
-        @keyframes drawM1 {
-          0% {
-            stroke-dashoffset: 2000;
-          }
-
-          15% {
-            stroke-dashoffset: 1850;
-          }
-
-          35% {
-            stroke-dashoffset: 1400;
-          }
-
-          55% {
-            stroke-dashoffset: 1150;
-          }
-
-          75% {
-            stroke-dashoffset: 800;
-          }
-
-          100% {
-            stroke-dashoffset: 0;
-          }
-        }
-
-        @keyframes drawM2 {
-          0% {
-            stroke-dashoffset: 2500;
-          }
-
-          20% {
-            stroke-dashoffset: 2100;
-          }
-
-          45% {
-            stroke-dashoffset: 1100;
-          }
-
-          75% {
-            stroke-dashoffset: 500;
-          }
-
-          100% {
-            stroke-dashoffset: 0;
-          }
-        }
-
-        .ink-tip {
-          animation: inkPulse 1.4s ease-in-out infinite;
-        }
-
-        @keyframes inkPulse {
-          0% {
-            opacity: .75;
-          }
-
-          50% {
-            opacity: 1;
-          }
-
-          100% {
-            opacity: .75;
-          }
-        }
-      `}</style>
-
       <g transform="translate(40,40) scale(2)">
-        {showModels && (
-          <Models ref={modelsRef} />
-        )}
+        {showModels && (<Models ref={modelsRef} />)}
 
-        {showM1 && (
-          <M1 ref={m1Ref} />
-        )}
+        {showM1 && (<M1 ref={m1Ref} />)}
 
         {showMisfits && <Misfits ref={misfitsRef} />}
         
@@ -289,5 +213,4 @@ export default function SignatureCanvas() { {
       </g>
     </svg>
   );
-}
 }
