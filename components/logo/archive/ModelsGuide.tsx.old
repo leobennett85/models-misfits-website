@@ -1,0 +1,22 @@
+import { forwardRef } from "react";
+import type { SVGProps } from "react";
+
+const ModelsGuide = forwardRef<
+  SVGPathElement,
+  SVGProps<SVGPathElement>
+>(({ ...props }, ref) => (
+  <path
+    ref={ref}
+    id="guideModels"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth={0.5}
+    vectorEffect="non-scaling-stroke"
+    d=""
+    {...props}
+  />
+));
+
+ModelsGuide.displayName = "ModelsGuide";
+
+export default ModelsGuide;

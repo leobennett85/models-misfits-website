@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import AnimatedSignature from "./AnimatedSignature";
+import SignatureCanvas from "./SignatureCanvas";
 
 interface AnimatedLogoIntroProps {
   onComplete: () => void;
@@ -16,12 +16,12 @@ export default function AnimatedLogoIntro({
   useEffect(() => {
     const shrinkTimer = setTimeout(() => {
       setShrink(true);
-    }, 7500);
+    }, 10000);
 
     const completeTimer = setTimeout(() => {
       setHidden(true);
       onComplete();
-    }, 11000);
+    }, 30000);
 
     return () => {
       clearTimeout(shrinkTimer);
@@ -51,15 +51,14 @@ export default function AnimatedLogoIntro({
           top: "40%",
           transformOrigin: "center center",
           transform: shrink
-            ? "translate(-50%,-50%) translateY(-10vh) scale(.25)"
+            ? "translate(-50%,-50%) translateY(-15vh) scale(.25)"
             : "translate(-50%,-50%) scale(1)",
           transition:
             "transform 2400ms cubic-bezier(.22,1,.36,1)",
         }}
       >
-        {/* <AnimatedSignature /> */}
 
-<AnimatedSignature />
+        <SignatureCanvas />
       </div>
     </div>
   );

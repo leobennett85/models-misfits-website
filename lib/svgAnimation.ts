@@ -1,23 +1,32 @@
-export function initializeStroke(path: SVGPathElement): number {
+export interface StrokeAnimation {
+  path: SVGPathElement;
+  length: number;
+}
+
+export function initializeStroke(path: SVGPathElement): StrokeAnimation {
   const length = path.getTotalLength();
 
   path.style.strokeDasharray = `${length}`;
   path.style.strokeDashoffset = `${length}`;
 
-  return length;
+  return {
+    path,
+    length,
+  };
 }
 
 export function updateStroke(
-  path: SVGPathElement,
+  stroke: StrokeAnimation,
   progress: number
 ) {
-  const length = path.getTotalLength();
-
-  path.style.strokeDashoffset = `${length * (1 - progress)}`;
+  stroke.path.style.strokeDashoffset =
+    `${stroke.length * (1 - progress)}`;
 }
 
-export function resetStroke(path: SVGPathElement) {
-  const length = path.getTotalLength();
-
-  path.style.strokeDashoffset = `${length}`;
+export function resetStroke(
+  stroke: StrokeAnimation,
+  progress: number
+) {
+  stroke.path.style.strokeDashoffset =
+    `${stroke.length - progress}`;
 }
