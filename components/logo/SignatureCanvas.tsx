@@ -14,7 +14,7 @@ const PATH_SEGMENTS = [
   "m 80.851282,147.47913 5.864255,-3.05433 c 0,0 -5.481797,5.50993 -6.374188,5.68957 -0.892359,0.1796 -6.310433,-3.23409 -6.310433,-4.37189 0,-1.1379 0.701161,-2.6352 3.505816,-2.15613 2.804617,0.47924 6.119199,3.23412 4.525645,6.04894 -1.593521,2.81481 -3.378303,2.2159 -3.378303,2.2159 0,0 3.123353,-1.85671 4.14322,-1.43735 1.019873,0.41911 3.314556,0.35936 3.697014,0.17955",
   
   // 3: Second heavy M flourish loop sequence
-  "m 107.634167,130.73751 c 0,0 15.222837,-10.58112 46.116222,-13.37615 30.89332,-2.79504 -54.548113,36.53495 -54.548113,36.53495 0,0 67.084543,-40.12851 74.695943,-38.13201 7.6114,1.99644 -32.23652,25.55435 -38.05699,28.94837 -5.82048,3.39402 56.86162,-27.15171 89.99365,-32.54197 33.13225,-5.39048 -68.95038,19.1658 -65.36854,54.90215 3.58182,35.73621 155.81022,-43.92184 155.81022,-43.92184",
+  "m 100.634167,130.73751 c 0,0 15.222837,-10.58112 46.116222,-13.37615 30.89332,-2.79504 -54.548113,36.53495 -54.548113,36.53495 0,0 67.084543,-40.12851 74.695943,-38.13201 7.6114,1.99644 -32.23652,25.55435 -38.05699,28.94837 -5.82048,3.39402 56.86162,-27.15171 89.99365,-32.54197 33.13225,-5.39048 -68.95038,19.1658 -65.36854,54.90215 3.58182,35.73621 155.81022,-43.92184 155.81022,-43.92184",
   
   // 4: Text segment "isfits" - Flattened and aligned to baseline
   "m 184.43685, 147.47913 c 0,0 2.6995,-1.52756 3.40506,-1.49889 0.70553,0.0299 0.39876,2.30574 2.20867,2.44992 1.80988,0.1441 9.7243,-3.66048 10.49121,-3.54503 0.76694,0.1152 -0.92029,3.91982 -1.90194,4.23687 -0.98161,0.31693 -1.34973,-0.69184 -1.28838,-0.89362 0.0614,-0.20177 0.70557,-0.6053 1.19635,-0.28809 0.49082,0.31702 1.22706,0.51879 1.9633,0.51879 0.73625,0 6.84081,-2.82472 8.68136,-4.32339 1.84058,-1.49865 1.77923,-3.60282 1.28841,-3.80458 -0.49082,-0.20177 -5.27628,2.99751 -5.76711,7.83963 -0.49082,4.8421 0.4327,8.34229 0.80082,8.42877 2.06778,1.63235 1.80968,-6.55335 0.95586,-9.71321 1.22703,-1.26803 5.90263,1.15542 6.51616,0.78058 0.714,-0.30754 2.02826,-2.41271 2.10188,-3.17045 0.95095,-0.17308 -1.20304,3.30135 -0.58951,3.44534 0.61353,0.14413 2.54656,1.03604 5.12335,0.14204 2.57679,-0.89354 9.90839,-5.73566 9.41756,-6.45615 -0.49082,-0.72057 -5.52169,6.25438 -4.75477,6.85952 0.76687,0.60527 4.80959,0.46704 7.17165,-0.34003 3.58061,-0.57255 3.66377,-3.34984 3.89709,-3.48723 2.14731,0.23046 1.2729,3.71019 0.99681,3.76783 -0.27621,0.0572 -3.07749,-0.68557 -2.83208,-1.08911 0.24535,-0.40348 2.49377,0.33463 2.73918,0.47879 0.24534,0.14417 3.78657,-1.06589 4.06267,-0.92175",
@@ -23,7 +23,7 @@ const PATH_SEGMENTS = [
   "m 232.82862, 140.2946 c 0,0 -5.79781,0.66292 -7.51566,0.34591",
   
   // 6: DOUBLE SIZE HEART
-  "m 215.21287,139.71936 c 0,0 3.61982,-0.40356 3.74252,-1.49844 0.1228,-1.09532 -0.30676,-1.49888 -0.30676,-1.49888 0,0 -0.9203,-0.63406 -1.28842,-0.28836 -0.36786,0.346 -0.36786,0.1144 -0.36786,0.346 0,0.23062 -0.1228,-1.15308 -0.67488,-1.15308 -0.5518,0 -1.71782,0.23046 -1.77916,0.74966 -0.0624,0.51882 -0.73624,0.40342 0,1.61374"
+  "m 217.21287,139.71936 c 0,0 3.61982,-0.40356 3.74252,-1.49844 0.1228,-1.09532 -0.30676,-1.49888 -0.30676,-1.49888 0,0 -0.9203,-0.63406 -1.28842,-0.28836 -0.36786,0.346 -0.36786,0.1144 -0.36786,0.346 0,0.23062 -0.1228,-1.15308 -0.67488,-1.15308 -0.5518,0 -1.71782,0.23046 -1.77916,0.74966 -0.0624,0.51882 -0.73624,0.40342 0,1.61374"
 ];
 function staggerPacing(x: number): number {
   if (x < 0.25) {
@@ -154,9 +154,9 @@ export default function SignatureCanvas() {
           100% { stop-color: #f8f4ef; }
         }
         @keyframes sparkleBurst {
-          0% { transform: translate(0, 0) scale(0) rotate(0deg); opacity: 0; }
-          20% { transform: translate(0, 0) scale(5) rotate(45deg); opacity: 1; }
-          100% { transform: translate(var(--tx), var(--ty)) scale(0) rotate(180deg); opacity: 0; }
+          0% { transform: translate(0, 0) scale(0) rotate(-360deg); opacity: 1; }
+          20% { transform: translate(0, 0) scale(2) rotate(-145deg); opacity: 1; }
+          100% { transform: translate(var(--tx), var(--ty)) scale(0) rotate(360deg); opacity: 0; }
         }
         .prism-stop-1 { animation: prismShift 4s infinite linear; }
         .prism-stop-2 { animation: prismShift 4s infinite linear 0.5s; }
@@ -166,7 +166,7 @@ export default function SignatureCanvas() {
       `}</style>
 
       <svg
-        viewBox="-92 105 435 80"
+        viewBox="-92 100 420 80" /* Decrease last two numbers to increase w and h */
         preserveAspectRatio="xMidYMid meet"
         style={{
           width: "85vw",        
@@ -176,16 +176,7 @@ export default function SignatureCanvas() {
       >
         <defs>
           
-        {/*
-        PRISM VERSION:
-        <linearGradient id="prismBurnGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" className="prism-stop-1" />
-            <stop offset="25%" className="prism-stop-2" stopColor="#a29b92" />
-            <stop offset="50%" className="prism-stop-3" stopColor="#bfae9e" />
-            <stop offset="75%" className="prism-stop-4" stopColor="#9cb3bc" />
-            <stop offset="100%" className="prism-stop-5" />
-          </linearGradient>
-          */}
+ 
 
           {/* --- ACTIVE: BLACK INK VERSION */}
           <linearGradient id="prismBurnGradient">
@@ -212,27 +203,14 @@ export default function SignatureCanvas() {
             </feMerge>
           </filter>
         </defs>
-        {/*
-        <g
-          ref={containerRef}
-          style={{
-            fill: "none",
-            stroke: "url(#prismBurnGradient)",
-            filter: "url(#burnSparkle)",
-            strokeWidth: 0.8, 
-            vectorEffect: "non-scaling-stroke", 
-            strokeLinecap: "round",
-            strokeLinejoin: "round",
-          }}
-        >
-          */}
+        
           <g
             ref={containerRef}
             style={{
               fill: "none",
               stroke: "#000000", // Switched from gradient to solid black
               filter: "none",    // Removed burn filter to keep ink clean
-              strokeWidth: 1.8, 
+              strokeWidth: 0.2, 
               vectorEffect: "non-scaling-stroke", 
               strokeLinecap: "butt",
               strokeLinejoin: "bevel",
@@ -246,60 +224,34 @@ export default function SignatureCanvas() {
             />
           ))}
         </g>
-        {/* PRISM VERSION
-        <g>
-        {sparkles.map((sparkle) => (
-
-            <path
-
-              key={sparkle.id}
-
-              d={`M ${sparkle.x} ${sparkle.y - sparkle.size} L ${sparkle.x + sparkle.size * 0.1} ${sparkle.y - sparkle.size * 0.1} L ${sparkle.x + sparkle.size} ${sparkle.y} L ${sparkle.x + sparkle.size * 0.1} ${sparkle.y + sparkle.size * 0.1} L ${sparkle.x} ${sparkle.y + sparkle.size} L ${sparkle.x - sparkle.size * 0.1} ${sparkle.y + sparkle.size * 0.1} L ${sparkle.x - sparkle.size} ${sparkle.y} L ${sparkle.x - sparkle.size * 0.1} ${sparkle.y - sparkle.size * 0.1} Z`}
-
-              fill={sparkle.color}
-
-              style={{
-
-                transformBox: "fill-box",
-
-                transformOrigin: "center",
-
-                filter: "drop-shadow(0px 0px 2px white)",
-
-                opacity: 0.95,
-
-                "--tx": `${sparkle.tx}px`,
-
-                "--ty": `${sparkle.ty}px`,
-
-                animation: "sparkleBurst 0.7s cubic-bezier(0.1, 0.8, 0.3, 1) forwards",
-
-              } as React.CSSProperties}
-
-            />
-
-          ))}
-      </g>
-      */}
-
-      <g>
-        {sparkles.map((sparkle) => (
-  <path
-    key={sparkle.id}
-    d={`M ${sparkle.x} ${sparkle.y - sparkle.size} L ${sparkle.x + sparkle.size * 0.1} ${sparkle.y - sparkle.size * 0.1} L ${sparkle.x + sparkle.size} ${sparkle.y} L ${sparkle.x + sparkle.size * 0.1} ${sparkle.y + sparkle.size * 0.1} L ${sparkle.x} ${sparkle.y + sparkle.size} L ${sparkle.x - sparkle.size * 0.1} ${sparkle.y + sparkle.size * 0.1} L ${sparkle.x - sparkle.size} ${sparkle.y} L ${sparkle.x - sparkle.size * 0.1} ${sparkle.y - sparkle.size * 0.1} Z`}
-    fill="#ffffff" // Switched from dynamic colors to solid white
-    style={{
-      transformBox: "fill-box",
-      transformOrigin: "center",
-      filter: "drop-shadow(0px 0px 2px #ffffff)", // Added shadow for contrast against white
-      opacity: 0.95,
-      "--tx": `${sparkle.tx}px`,
-      "--ty": `${sparkle.ty}px`,
-      animation: "sparkleBurst 0.7s cubic-bezier(0.1, 0.8, 0.3, 1) forwards",
-    } as React.CSSProperties}
-  />
-))}
-      </g>
+        
+  
+      {sparkles.map((sparkle) => (
+        <path
+          key={sparkle.id}
+          /* Elongated "Twilight" Path: Long points (size) vs thin width (0.05) */
+        
+          d={`M ${sparkle.x} ${sparkle.y - sparkle.size * 12} 
+              L ${sparkle.x + sparkle.size * 0.1} ${sparkle.y - sparkle.size * 0.1} 
+              L ${sparkle.x + sparkle.size * 12} ${sparkle.y} 
+              L ${sparkle.x + sparkle.size * 0.1} ${sparkle.y + sparkle.size * 0.1} 
+              L ${sparkle.x} ${sparkle.y + sparkle.size * 12} 
+              L ${sparkle.x - sparkle.size * 0.1} ${sparkle.y + sparkle.size * 0.1} 
+              L ${sparkle.x - sparkle.size * 12} ${sparkle.y} 
+              L ${sparkle.x - sparkle.size * 0.1} ${sparkle.y - sparkle.size * 0.1} Z`}
+          fill="#ffffff"
+          style={{
+            transformBox: "fill-box",
+            transformOrigin: "center",
+            filter: "drop-shadow(0px 0px 0.03px #e7fdcf)",
+            opacity:0.2, // Keep it translucent
+            "--tx": `${sparkle.tx}px`,
+            "--ty": `${sparkle.ty}px`,
+            // Smoother, longer duration for a "twilight" drift
+            animation: "sparkleBurst 5s ease-out forwards", 
+          } as React.CSSProperties}
+        />
+      ))}
 
         <g style={{ display: "none", visibility: "hidden", opacity: 0 }}>
           <Pen x={penPos.x} y={penPos.y} />
