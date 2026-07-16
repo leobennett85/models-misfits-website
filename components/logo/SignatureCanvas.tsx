@@ -141,7 +141,7 @@ export default function SignatureCanvas() {
         justifyContent: "center", 
         alignItems: "center",
         overflow: "hidden",
-        backgroundColor: "#f8f4ef"
+        backgroundColor: "#000000"
       }}
     >
       <style>{`
@@ -208,12 +208,12 @@ export default function SignatureCanvas() {
             ref={containerRef}
             style={{
               fill: "none",
-              stroke: "#000000", // Switched from gradient to solid black
-              filter: "none",    // Removed burn filter to keep ink clean
-              strokeWidth: 0.2, 
+              stroke: "#ffffff", // Switched from gradient to solid black
+              strokeWidth: 1, 
               vectorEffect: "non-scaling-stroke", 
               strokeLinecap: "butt",
               strokeLinejoin: "bevel",
+              filter: 'drop-shadow(0px 0px 3px #ffffff)', // Adjust the 8px for glow intensity
             }}
           >
           {PATH_SEGMENTS.map((d, index) => (
@@ -243,7 +243,7 @@ export default function SignatureCanvas() {
           style={{
             transformBox: "fill-box",
             transformOrigin: "center",
-            filter: "drop-shadow(0px 0px 0.03px #e7fdcf)",
+            filter: "drop-shadow(0px 0px 5px 5px #e7fdcf)",
             opacity:0.2, // Keep it translucent
             "--tx": `${sparkle.tx}px`,
             "--ty": `${sparkle.ty}px`,
