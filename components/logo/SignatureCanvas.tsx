@@ -65,7 +65,7 @@ export default function SignatureCanvas() {
       path.style.strokeDashoffset = `${lengths[i]}`;
     });
 
-    const duration = 5000; 
+    const duration = 2000; 
     let frameId = 0;
     let startTime: number | null = null;
     let lastPenPos = { x: -66.1, y: 135.2 };
